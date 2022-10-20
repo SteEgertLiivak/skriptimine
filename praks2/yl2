@@ -1,0 +1,11 @@
+#!/bin/bash
+echo -n "Today is "
+date +"%A %B %Y"
+echo -n "Time is " 
+date +"%H:%M"
+echo
+
+echo -n "Calender of " 
+date +"%B %Y" 
+cal | tail -n 7
+
