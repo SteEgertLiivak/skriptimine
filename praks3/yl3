@@ -1,0 +1,12 @@
+#!/bin/bash
+
+echo -n "Ainepunktide arv: $ainepunktid"
+read ainepunktid
+
+echo -n "Nädalate arv : $aeg"
+read aeg
+
+aeg=`echo "scale=1;$ainepunktid/$aeg" | bc`
+aeg_ymarda="`echo "($aeg+0.9)/1" | bc`"
+
+echo $aeg_ymarda

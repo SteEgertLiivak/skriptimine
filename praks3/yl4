@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo -n "Reisijate arv: $reisijad "
+read reisijad
+
+echo -n "Kohtade arv bussis: $kohad "
+read kohad
+
+bussid=$(( $reisijad / $kohad ))
+mahajaanud=$(( $reisijad % $kohad ))
+
+echo "Busside arv: $bussid"
+echo "Mahajäänute arv: $mahajaanud"
