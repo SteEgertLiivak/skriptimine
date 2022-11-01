@@ -1,0 +1,21 @@
+#!/bin/bash
+
+kasutaja=$(whoami)
+aeg=$(date +"%H")
+#hommik 6:00 - 12:00
+#päev 12:00 - 18:00
+#õhtu 18:00 - 22:00
+#öö 22:00 - 6:00
+# 22 kuni 23 või 00 kuni 6
+
+if [ $aeg -ge 6 ] && [ $aeg -lt 12 ] ; then
+ echo "Tere hommikust $kasutaja!"
+elif [ $aeg -ge 12 ] && [ $aeg -lt 18 ] ; then
+  echo "Tere päevast $kasutaja!"
+elif [ $aeg -ge 18 ] && [ $aeg -lt 22 ] ; then
+  echo "Tere õhtust $kasutaja!"
+elif [ $aeg -ge 22 ] && [ $aeg -lt 23 ] ; then
+  echo "Head ööd $kasutaja!"
+elif [ $aeg -ge 0 ] && [ $aeg -lt 6 ] ; then
+  echo "Head ööd $kasutaja!"
+fi
